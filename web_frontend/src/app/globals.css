@@ -33,6 +33,17 @@ h1, h2, h3, h4, h5 {
   --primary: #1a1a2e;
   --secondary: #16213e;
   --accent: #e94560;
+  --text-main: #21213a;
+  --text-muted: #6c6c8f;
+  --bg-main: #ffffff;
+  --radius-sm: 12px;
+  --radius-md: 22px;
+  --nav-height: 72px;
+  --container: 1240px;
+  --shadow-lg: 0 6px 24px 0 rgba(23, 22, 45, 0.10);
+  --shadow-card: 0 2px 12px 0 rgba(40,30,60,0.08);
+  --transition: 0.18s cubic-bezier(0.83,0,0.17,1);
+  --font-main: "Inter", system-ui, sans-serif;
 }
 
 /* General Styling */
