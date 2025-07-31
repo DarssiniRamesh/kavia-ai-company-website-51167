@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === Global site style overrides for pixel-perfect design === */
+
+html, body {
+  background: #fff;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+  color: #22223b;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #e94560;
+}
+
 /* General Styling */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;

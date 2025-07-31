@@ -1,56 +1,57 @@
 "use client";
-
-// PUBLIC_INTERFACE
 import React from "react";
 import FeatureCard from "./FeatureCard";
 
-// Use string unicode values, not JSX elements!
-const features = [
+// PUBLIC_INTERFACE
+/**
+ * Section showing three main features in a horizontal grid (with cards).
+ */
+const featureList = [
   {
-    icon: "📦", // CI/CD
-    title: "CI/CD Integration",
-    description: "Seamless deployment pipelines. Automate, build, and deploy with confidence for rapid iteration."
+    icon: "🤖",
+    title: "Smart Q&A",
+    desc: "Instant, precise answers to all team questions using your company data and docs.",
   },
   {
-    icon: "👥", // Collaborative Dev
-    title: "Collaborative Dev",
-    description: "Built for teams. Real-time code reviews, comments, and merge tracking to boost productivity."
+    icon: "🔒",
+    title: "Secure AI Engine",
+    desc: "Enterprise-grade privacy, role-based access, and knowledge boundaries ensured.",
   },
   {
-    icon: "🔒", // Enterprise Security
-    title: "Enterprise Security",
-    description: "Top-tier protection for your code and data. Compliance, auditing, and encryption at every layer."
+    icon: "⚡",
+    title: "Automation Hub",
+    desc: "Automate tasks and notifications with easy-to-configure AI-driven workflows.",
   },
-  {
-    icon: "💻", // AI
-    title: "AI-Driven Insights",
-    description: "Leverage intelligent dashboards and workflow recommendations to optimize every sprint."
-  },
-  {
-    icon: "📶", // API
-    title: "API-First Design",
-    description: "Query, test, and document APIs natively. Speed up integration and client onboarding dramatically."
-  },
-  {
-    icon: "💬", // Support
-    title: "24/7 Support",
-    description: "Our global team is here to answer questions and resolve issues—so you never miss a launch."
-  }
 ];
 
-export default function FeatureGrid() {
-  return (
-    <section className="feature-grid-wrap">
-      <div className="feature-grid">
-        {features.map((feature, i) =>
-          <FeatureCard
-            key={i}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
-        )}
-      </div>
-    </section>
-  );
-}
+const FeatureGrid = () => (
+  <section className="feature-grid-root" id="features">
+    <div className="feature-grid">
+      {featureList.map((f) => (
+        <FeatureCard key={f.title} icon={f.icon} title={f.title} desc={f.desc} />
+      ))}
+    </div>
+    <style jsx>{`
+      .feature-grid-root {
+        background: #fff;
+        padding: 2.3rem 0 2.9rem 0;
+      }
+      .feature-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.8rem;
+        max-width: 950px;
+        margin: 0 auto;
+      }
+      @media (max-width: 900px) {
+        .feature-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    `}</style>
+  </section>
+);
+
+export default FeatureGrid;
